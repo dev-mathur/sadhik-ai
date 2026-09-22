@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "run_id": "RUN-2026-08-MER-001",
+      "period": "2026-08",
+      "tier": "close",
+      "executed_at": "2026-09-03T14:22:07Z",
+      "findings": 14,
+      "total_exposure_usd": "102491.51",
+      "label": "14 open findings",
+      "config_version": 7
+    }
+  ]
+}

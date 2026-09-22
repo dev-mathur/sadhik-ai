@@ -1,0 +1,252 @@
+# Sadhik-owned floor registry (design §5.2, §5.3).
+#
+# Customers CANNOT express anything in this file. A customer config that tries to
+# set a floor is rejected, not ignored.
+#
+# Each parameter has up to three constraints:
+#   floor        strictest-allowed value from regulation or contract. null when the
+#                check has no regulatory number (audit-practice / customer-policy).
+#   min / max    the range Sadhik allows a customer to tune within.
+#   direction    which way is STRICTER. Validation compares strictness, not magnitude.
+#
+# review_status is "unreviewed" throughout: no GovCon CPA has reviewed these
+# citations or interpretations yet (RE §5.3 `review_status`). Nothing here should
+# be shown to a customer as reviewed. Floors below are limited to the two checks
+# the design lists as zero-tolerance (RE §7 rows 1 and 8).
+
+floor_registry_version: "2026-09-01"
+review_status: unreviewed
+
+rules:
+  L-01:
+    unapproved_category_tolerance:
+      direction: lower_is_stricter
+      floor: 0
+      default: 0
+      basis: regulatory
+      citation: "FAR 52.232-7 (labor category qualifications)"
+      note: "Zero tolerance. A customer may not loosen this; they may add an earlier-warning tier only."
+
+  L-02:
+    hours_variance_watch_pct:
+      direction: lower_is_stricter
+      floor: null
+      default: 1.0
+      min: 0.25
+      max: 2.0
+      basis: audit_practice
+      citation: "FAR 31.201-2; SF 1408 labor distribution (tolerance is customer-set)"
+    hours_variance_exception_pct:
+      direction: lower_is_stricter
+      floor: null
+      default: 3.0
+      min: 1.0
+      max: 5.0
+      basis: audit_practice
+      citation: "FAR 31.201-2; SF 1408 labor distribution (tolerance is customer-set)"
+    employee_gap_exception_hours:
+      direction: lower_is_stricter
+      floor: null
+      default: 8.0
+      min: 2.0
+      max: 16.0
+      basis: audit_practice
+      citation: "FAR 31.201-2; SF 1408 labor distribution (tolerance is customer-set)"
+    employee_gap_materiality_hours:
+      direction: lower_is_stricter
+      floor: null
+      default: 4.0
+      min: 1.0
+      max: 8.0
+      basis: audit_practice
+      citation: "Materiality: gaps below this are logged with lineage but raise no finding"
+
+  L-03:
+    dollar_variance_watch_pct:
+      direction: lower_is_stricter
+      floor: null
+      default: 0.5
+      min: 0.1
+      max: 1.0
+      basis: audit_practice
+      citation: "FAR 31.201-2; SF 1408 (tolerance is customer-set)"
+    dollar_variance_exception_pct:
+      direction: lower_is_stricter
+      floor: null
+      default: 2.0
+      min: 0.5
+      max: 4.0
+      basis: audit_practice
+      citation: "FAR 31.201-2; SF 1408 (tolerance is customer-set)"
+
+  L-05:
+    late_threshold_hours:
+      direction: lower_is_stricter
+      floor: null
+      default: 72
+      min: 24
+      max: 168
+      basis: customer_policy
+      citation: "DCAA Information for Contractors: timely recording (baseline is the customer's written timekeeping policy)"
+    late_rate_watch_pct:
+      direction: lower_is_stricter
+      floor: null
+      default: 5.0
+      min: 1.0
+      max: 15.0
+      basis: audit_practice
+      citation: "DCAA Information for Contractors: timely recording"
+    cluster_window_start_hour:
+      direction: higher_is_stricter
+      floor: null
+      default: 12
+      min: 8
+      max: 20
+      basis: audit_practice
+      citation: "Friday entry-time window start (hour of day). An earlier start widens the window."
+    cluster_index_watch:
+      direction: lower_is_stricter
+      floor: null
+      default: 1.5
+      min: 1.1
+      max: 3.0
+      basis: audit_practice
+      citation: "Analytic signal, not a rule violation; baseline-driven"
+    cluster_index_exception:
+      direction: lower_is_stricter
+      floor: null
+      default: 2.5
+      min: 1.5
+      max: 5.0
+      basis: audit_practice
+      citation: "Analytic signal, not a rule violation; baseline-driven"
+    cluster_min_group_entries:
+      direction: lower_is_stricter
+      floor: null
+      default: 30
+      min: 10
+      max: 200
+      basis: audit_practice
+      citation: "Groups with fewer entries than this are not scored (too few to be meaningful)"
+
+  L-06:
+    edit_rate_watch_pct:
+      direction: lower_is_stricter
+      floor: null
+      default: 3.0
+      min: 0.5
+      max: 10.0
+      basis: audit_practice
+      citation: "DCAA Information for Contractors; FAR 52.215-2 (documented corrections)"
+    undocumented_edit_exception_pct:
+      direction: lower_is_stricter
+      floor: null
+      default: 10.0
+      min: 1.0
+      max: 25.0
+      basis: audit_practice
+      citation: "DCAA Information for Contractors; documentation of changes"
+    edits_last_two_days_exception_pct:
+      direction: lower_is_stricter
+      floor: null
+      default: 50.0
+      min: 20.0
+      max: 90.0
+      basis: audit_practice
+      citation: "Period-end clustering of post-submission edits"
+
+  L-09:
+    out_of_pop_hours_tolerance:
+      direction: lower_is_stricter
+      floor: 0
+      default: 0
+      basis: contract
+      citation: "FAR 31.201-4 (allocability); FAR 52.216-7; contract period of performance"
+      note: "Zero tolerance. Any charge outside the period of performance is an Exception."
+
+  L-08:
+    indirect_share_shift_pp:
+      direction: lower_is_stricter
+      floor: null
+      default: 15
+      min: 5
+      max: 40
+      basis: audit_practice
+      citation: "DFARS 252.242-7006(c)(2); CAS 402 (to verify). Rise in an employee's indirect share of hours, in percentage points, over their own trailing baseline."
+    min_excess_hours:
+      direction: lower_is_stricter
+      floor: null
+      default: 16
+      min: 4
+      max: 80
+      basis: audit_practice
+      citation: "Materiality: indirect hours above the employee's own baseline must exceed this before a finding is raised"
+
+  L-11:
+    rate_drift_watch_pct:
+      direction: lower_is_stricter
+      floor: null
+      default: 2.0
+      min: 0.5
+      max: 4.0
+      basis: audit_practice
+      citation: "FAR 52.216-7; FAR 42.704; CAS 418 (to verify). Absolute drift of the actual pool/base rate from the provisional billing rate."
+    rate_drift_exception_pct:
+      direction: lower_is_stricter
+      floor: null
+      default: 5.0
+      min: 2.0
+      max: 10.0
+      basis: audit_practice
+      citation: "FAR 52.216-7; FAR 42.704; CAS 418 (to verify)"
+    systemic_periods:
+      direction: lower_is_stricter
+      floor: null
+      default: 3
+      min: 2
+      max: 6
+      basis: audit_practice
+      citation: "Consecutive periods (ending at the current one) with drift beyond the Watch threshold; at or above this an Exception is High severity (FR section 6, systemic pattern)"
+
+  C-01:
+    unallowable_tolerance_usd:
+      direction: lower_is_stricter
+      floor: 0
+      default: 0
+      basis: regulatory
+      citation: "FAR 31.205 (cost principles): a cost the principles make expressly unallowable must not sit in an indirect pool. Zero tolerance; a customer may not loosen it."
+      note: "Any amount in an unallowable account within an indirect pool is an Exception. Conditional accounts raise a finding only above materiality."
+
+  C-02:
+    ics_due_months:
+      direction: lower_is_stricter
+      floor: 6
+      default: 6
+      min: 1
+      max: 6
+      basis: regulatory
+      citation: "FAR 52.216-7(d)(2): the final indirect cost rate proposal is due within six months after the end of the fiscal year. A customer may set an EARLIER internal deadline, never a later one."
+
+  C-03:
+    ceiling_excess_tolerance:
+      direction: lower_is_stricter
+      floor: 0
+      default: 0
+      basis: contract
+      citation: "Contract rate ceiling clause (to verify against the customer's contracts). Billing above a contractual ceiling rate is zero tolerance; a customer may not loosen it."
+
+global:
+  materiality_pct:
+    direction: lower_is_stricter
+    floor: null
+    default: 0.005
+    min: 0.001
+    max: 0.02
+    citation: "Share of period labor cost above which an Exception is High severity"
+  coverage_floor:
+    direction: higher_is_stricter
+    floor: null
+    default: 0.85
+    min: 0.5
+    max: 1.0
+    citation: "Below this coverage the overall label is 'Incomplete data' regardless of findings"

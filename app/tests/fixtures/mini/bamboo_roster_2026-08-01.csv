@@ -1,0 +1,3 @@
+Employee #,Name,Job Title,Hire Date,Termination Date,FLSA Status,Department,Supervisor
+E-0001,Ada Lovelace,Data Engineer,2021-03-01,,Exempt,Engineering,E-0009
+E-0002,Grace Hopper,Sr. Data Engineer,2019-06-15,2026-09-30,Non-Exempt,Engineering,E-0009

@@ -1,0 +1,18 @@
+# Column mapping: BambooHR roster -> canonical Employee (contracts/DATA_SPEC.md 1.5).
+mapping_id: bamboo_meridian
+version: 1
+source: bamboo
+columns:
+  hris:
+    "Employee #": employee_id
+    "Name": name
+    "Job Title": title
+    "Hire Date": hire_date
+    "Termination Date": term_date
+    "FLSA Status": exempt_status
+    "Department": home_department
+value_maps:
+  hris:
+    exempt_status:
+      "Exempt": exempt
+      "Non-Exempt": non_exempt

@@ -1,0 +1,38 @@
+{
+  "accepted": false,
+  "errors": [
+    {
+      "line": 15,
+      "path": "rules.L-05.late_threshold_hours",
+      "code": "exceeds_max",
+      "message": "late_threshold_hours 200 exceeds the maximum allowed value 168"
+    },
+    {
+      "line": 19,
+      "path": "rules.L-09.out_of_pop_hours_tolerance",
+      "code": "looser_than_floor",
+      "message": "out_of_pop_hours_tolerance 5 is looser than the floor 0; floors cannot be loosened"
+    },
+    {
+      "line": 22,
+      "path": "rules.L-01.floor",
+      "code": "floor_not_settable",
+      "message": "floors are owned by Sadhik and cannot be set in a customer config"
+    },
+    {
+      "line": 25,
+      "path": "rules.L-09.enabled",
+      "code": "cannot_disable_regulatory_rule",
+      "message": "L-09 is contract-based and cannot be disabled; use status: not_applicable with a reason"
+    },
+    {
+      "line": 4,
+      "path": "domains[1]",
+      "code": "unknown_domain",
+      "message": "'dcaa_costs' is not a known domain; use one of labor, dcaa_cost_accounting"
+    }
+  ],
+  "warnings": [],
+  "sha256": null,
+  "config_version": null
+}

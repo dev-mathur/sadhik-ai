@@ -1,0 +1,72 @@
+{
+  "finding_id": "F-3311",
+  "fingerprint": "L-01|E-0417|C-8841",
+  "run_id": "RUN-2026-08-MER-001",
+  "latest_run_id": "RUN-2026-08-MER-001",
+  "rule_id": "L-01",
+  "rule_version": "1.0.0",
+  "period": "2026-08",
+  "headline": "Data Engineer III billed on C-8841 for an employee crosswalked to Data Engineer II",
+  "authorities": [
+    "FAR 52.232-7",
+    "FAR 31.201-2"
+  ],
+  "basis": "regulatory",
+  "severity": "high",
+  "severity_reason": "integrity_failure:category_above_crosswalk_billed_tm",
+  "status": "open",
+  "metric": {
+    "id": "M3",
+    "value": "0.0029",
+    "numerator": "12",
+    "denominator": "4120",
+    "threshold_tripped": "any_unapproved_category_on_tm",
+    "baseline_confidence": "n/a"
+  },
+  "computed": {
+    "employee_id": "E-0417",
+    "hris_title": "Data Engineer",
+    "crosswalked_category": "Data Engineer II",
+    "charged_category": "Data Engineer III",
+    "contract_id": "C-8841",
+    "hours": "96.0",
+    "charged_rate": "178.50",
+    "approved_rate": "142.00",
+    "rate_difference": "36.50",
+    "exposure_usd": "3504.00"
+  },
+  "exposure_usd": "3504.00",
+  "exposure_basis": "rate_difference",
+  "affected": {
+    "employees": [
+      "E-0417"
+    ],
+    "contracts": [
+      "C-8841"
+    ],
+    "entries": 12
+  },
+  "explanation": {
+    "what_happened": "In August 2026, employee E-0417 recorded 96.0 hours on contract C-8841 under the labor category \"Data Engineer III\". Meridian's confirmed crosswalk maps this employee's HRIS title, \"Data Engineer\", to \"Data Engineer II\". The two categories carry different ceiling rates on this contract.",
+    "why_it_matters": "C-8841 is a time-and-materials contract. Under FAR 52.232-7, hours are billed at the contract rate for the category the employee qualifies for. Hours recorded under a higher category than the crosswalk supports are inconsistent with that requirement, and the rate difference has been billed.",
+    "impact": "96.0 hours · 1 employee · 1 contract · $3,504.00 ($178.50 - $142.00 = $36.50 per hour x 96.0 hours).",
+    "recommended_action": "Confirm which category E-0417 is approved for on C-8841. If the employee holds a qualification the HRIS title does not reflect, update the crosswalk and attach the supporting documentation. If not, correct the timesheet entries and the affected invoice."
+  },
+  "evidence_count": 14,
+  "created_at": "2026-09-03T14:24:51Z",
+  "history": [
+    {
+      "from": null,
+      "to": "open",
+      "actor": "system",
+      "at": "2026-09-03T14:24:51Z",
+      "reason_code": null,
+      "note": "Opened by RUN-2026-08-MER-001"
+    }
+  ],
+  "allowed_transitions": [
+    "in_review"
+  ],
+  "domain": "labor",
+  "domain_name": "Labor"
+}

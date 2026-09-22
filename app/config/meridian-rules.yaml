@@ -1,0 +1,28 @@
+# meridian-rules.yaml
+# The customer's rules config. Sadhik floors live in config/floors.yaml and cannot be
+# expressed here: a file that tries to set one is rejected, not ignored.
+config_version: 7
+customer: meridian-systems
+effective_from: 2026-09-01
+changed_by: a.okafor
+approved_by: r.delgado           # Controller; required for any loosening
+reason: "Enabled the DCAA cost accounting domain (indirect rate drift and indirect share shift)"
+
+domains:                         # compliance domains to run; a domain left out is not run at all
+  - labor
+  - dcaa_cost_accounting
+
+schedule:                        # declared intent, measured against run history
+  fast: weekly
+  pay_period: semi_monthly
+  close: monthly
+
+defaults:
+  materiality_pct: 0.005
+  coverage_floor: 0.85
+
+rules:
+  L-05:
+    late_threshold_hours: 48     # default 72 -> stricter, accepted
+  L-02:
+    hours_variance_watch_pct: 0.75   # default 1.0 -> stricter, accepted

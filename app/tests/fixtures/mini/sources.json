@@ -1,0 +1,8 @@
+{"period":"2026-08","customer":"meridian-systems",
+ "sources":{"timekeeping":{"file":"meridian_time_2026-08.csv","data_as_of":"2026-08-31"},
+            "time_edits":{"file":"meridian_time_edits_2026-08.csv","data_as_of":"2026-08-31"},
+            "payroll":{"file":"adp_payroll_2026-08.csv","data_as_of":"2026-08-31"},
+            "gl":{"file":"qb_gl_2026-08.csv","data_as_of":"2026-08-31"},
+            "hris":{"file":"bamboo_roster_2026-08-01.csv","data_as_of":"2026-08-01"},
+            "contracts":{"file":"contracts.json","data_as_of":"2026-04-11"}},
+ "absent":["rate_data"]}

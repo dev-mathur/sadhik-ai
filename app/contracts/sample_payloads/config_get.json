@@ -1,0 +1,32 @@
+{
+  "config_version": 7,
+  "sha256": "91c4d2e07b3a",
+  "yaml": "# meridian-rules.yaml\nconfig_version: 7\ncustomer: meridian-systems\neffective_from: 2026-09-01\nchanged_by: a.okafor\napproved_by: r.delgado\nreason: \"Enabled the DCAA cost accounting domain\"\n\ndomains: [labor, dcaa_cost_accounting]\n\nschedule:\n  fast: weekly\n  pay_period: semi_monthly\n  close: monthly\n\ndefaults:\n  materiality_pct: 0.005\n  coverage_floor: 0.85\n\nrules:\n  L-05:\n    late_threshold_hours: 48\n",
+  "floor_registry_version": "2026-09-01",
+  "history": [
+    {
+      "config_version": 7,
+      "changed_by": "a.okafor",
+      "approved_by": "r.delgado",
+      "reason": "Enabled the DCAA cost accounting domain",
+      "effective_from": "2026-09-01",
+      "sha256": "91c4d2e07b3a"
+    },
+    {
+      "config_version": 6,
+      "changed_by": "a.okafor",
+      "approved_by": "r.delgado",
+      "reason": "Tightened late-entry threshold after August cluster finding",
+      "effective_from": "2026-09-01",
+      "sha256": "6a1f0b95c3d2"
+    },
+    {
+      "config_version": 5,
+      "changed_by": "a.okafor",
+      "approved_by": null,
+      "reason": "Initial thresholds",
+      "effective_from": "2026-07-01",
+      "sha256": "3c8e17d0aa41"
+    }
+  ]
+}

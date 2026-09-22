@@ -1,0 +1,25 @@
+# Column mapping: Unanet timekeeping export -> canonical fields (contracts/DATA_SPEC.md 1.1, 1.2).
+# Confirmed by the customer; the version is pinned in every run manifest.
+mapping_id: unanet_meridian
+version: 3
+source: unanet
+columns:
+  timekeeping:
+    "Entry ID": entry_id
+    "Person Code": employee_id
+    "TS Date": work_date            # the date the work was performed
+    "Hours": hours
+    "Charge": charge_code
+    "PLC": labor_category           # Project Labor Category
+    "Created On": entered_at
+    "Sub Dt": submitted_at          # SUBMISSION timestamp, not a work date
+    "Appr By": approved_by
+    "Appr Dt": approved_at
+  time_edits:
+    "Edit ID": edit_id
+    "Entry ID": entry_id
+    "Mod On": edited_at
+    "Mod By": editor_id
+    "Old Value": old_value
+    "New Value": new_value
+    "Reason": reason                # empty == undocumented edit

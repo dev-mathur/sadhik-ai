@@ -1,0 +1,72 @@
+{
+  "finding_id": "F-3315",
+  "fingerprint": "L-11|ga|2026-08",
+  "run_id": "RUN-2026-08-MER-001",
+  "latest_run_id": "RUN-2026-08-MER-001",
+  "rule_id": "L-11",
+  "rule_version": "1.0.0",
+  "period": "2026-08",
+  "headline": "G&A rate is 8.0% above its provisional billing rate (10.80% actual vs 10.00%)",
+  "authorities": [
+    "FAR 52.216-7",
+    "FAR 42.704",
+    "CAS 418 (to verify)"
+  ],
+  "basis": "audit_practice",
+  "severity": "high",
+  "severity_reason": "exception_drift_beyond_watch_for_4_consecutive_periods",
+  "status": "open",
+  "metric": {
+    "id": "M10",
+    "value": "0.0800",
+    "numerator": "0.0080",
+    "denominator": "0.1000",
+    "threshold_tripped": "drift_above_5_pct",
+    "baseline_confidence": "ok"
+  },
+  "computed": {
+    "pool": "ga",
+    "base_definition": "total_cost_input",
+    "pool_amount": "316944.03",
+    "base_amount": "2934666.94",
+    "actual_rate": "0.1080",
+    "provisional_rate": "0.1000",
+    "m10": "0.0800",
+    "direction": "under_billed",
+    "periods_beyond_watch": "4",
+    "history": "2026-05: 10.40% (+4.00%); 2026-06: 10.55% (+5.50%); 2026-07: 10.68% (+6.80%); 2026-08: 10.80% (+8.00%)",
+    "pool_change_pct": "3.1",
+    "base_change_pct": "1.2",
+    "exposure_usd": "23477.34"
+  },
+  "exposure_usd": "23477.34",
+  "exposure_basis": "rate_true_up",
+  "affected": {
+    "employees": [],
+    "contracts": [],
+    "entries": 0
+  },
+  "explanation": {
+    "what_happened": "For August 2026 the G&A indirect rate computed from the general ledger is 10.80% (pool $316,944.03 over a total cost input base of $2,934,666.94), against a provisional billing rate of 10.00%.",
+    "why_it_matters": "Under the cited requirements (FAR 52.216-7; FAR 42.704), costs are billed at provisional rates and later settled at actual rates. The actual rate has been more than 2% away from the provisional rate for 4 consecutive periods, so the provisional rate no longer tracks the actual rate.",
+    "impact": "Provisional 10.00% · actual 10.80% · drift +8.0% · about $23,477.34 under-billed at provisional rates for August (0.80 points x $2,934,666.94).",
+    "recommended_action": "Review what moved in the G&A pool and its base since April. Consider whether a revised provisional rate should be raised with the contracting officer before the year-end settlement."
+  },
+  "evidence_count": 9,
+  "created_at": "2026-09-03T14:24:51Z",
+  "history": [
+    {
+      "from": null,
+      "to": "open",
+      "actor": "system",
+      "at": "2026-09-03T14:24:51Z",
+      "reason_code": null,
+      "note": "Opened by RUN-2026-08-MER-001"
+    }
+  ],
+  "allowed_transitions": [
+    "in_review"
+  ],
+  "domain": "dcaa_cost_accounting",
+  "domain_name": "DCAA cost accounting"
+}

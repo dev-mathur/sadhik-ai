@@ -1,0 +1,9 @@
+{
+  "accepted": true,
+  "errors": [],
+  "warnings": [
+    "L-05.late_threshold_hours is stricter than the default (72 -> 48)"
+  ],
+  "sha256": "b7e0aa19d4c2",
+  "config_version": 8
+}

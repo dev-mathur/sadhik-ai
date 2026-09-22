@@ -1,0 +1,10 @@
+{
+  "run_id": "RUN-2026-08-MER-002",
+  "period": "2026-08",
+  "tier": "close",
+  "executed_at": "2026-09-20T15:10:00Z",
+  "findings": 14,
+  "new_findings": 0,
+  "total_exposure_usd": "102491.51",
+  "label": "14 open findings"
+}

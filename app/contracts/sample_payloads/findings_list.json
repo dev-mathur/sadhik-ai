@@ -1,0 +1,248 @@
+{
+  "total": 14,
+  "items": [
+    {
+      "finding_id": "F-3311",
+      "rule_id": "L-01",
+      "headline": "Data Engineer III billed on C-8841 for an employee crosswalked to Data Engineer II",
+      "severity": "high",
+      "status": "open",
+      "exposure_usd": "3504.00",
+      "employee_count": 1,
+      "employees": [
+        "E-0417"
+      ],
+      "contracts": [
+        "C-8841"
+      ],
+      "period": "2026-08",
+      "domain": "labor",
+      "domain_name": "Labor"
+    },
+    {
+      "finding_id": "F-3312",
+      "rule_id": "L-05",
+      "headline": "Entry-time clustering on the C-7302 team at 2.71x the 6-period baseline",
+      "severity": "high",
+      "status": "open",
+      "exposure_usd": "27518.40",
+      "employee_count": 9,
+      "employees": [
+        "E-0101",
+        "E-0102",
+        "E-0103",
+        "E-0104",
+        "E-0105",
+        "E-0106",
+        "E-0107",
+        "E-0108",
+        "E-0455"
+      ],
+      "contracts": [
+        "C-7302"
+      ],
+      "period": "2026-08",
+      "domain": "labor",
+      "domain_name": "Labor"
+    },
+    {
+      "finding_id": "F-3313",
+      "rule_id": "L-08",
+      "headline": "E-0143 charged 40.0 more hours to overhead than their own baseline (share 2.5% to 27.5%)",
+      "severity": "high",
+      "status": "open",
+      "exposure_usd": "3652.00",
+      "employee_count": 1,
+      "employees": [
+        "E-0143"
+      ],
+      "contracts": [
+        "C-8841"
+      ],
+      "period": "2026-08",
+      "domain": "dcaa_cost_accounting",
+      "domain_name": "DCAA cost accounting"
+    },
+    {
+      "finding_id": "F-3314",
+      "rule_id": "L-09",
+      "headline": "62.0 hours charged to C-7302 after its period of performance ended 2026-08-15",
+      "severity": "high",
+      "status": "open",
+      "exposure_usd": "5852.40",
+      "employee_count": 3,
+      "employees": [
+        "E-0455",
+        "E-0201",
+        "E-0202"
+      ],
+      "contracts": [
+        "C-7302"
+      ],
+      "period": "2026-08",
+      "domain": "labor",
+      "domain_name": "Labor"
+    },
+    {
+      "finding_id": "F-3315",
+      "rule_id": "L-11",
+      "headline": "G&A rate is 8.0% above its provisional billing rate (10.80% actual vs 10.00%)",
+      "severity": "high",
+      "status": "open",
+      "exposure_usd": "23477.34",
+      "employee_count": 0,
+      "employees": [],
+      "contracts": [],
+      "period": "2026-08",
+      "domain": "dcaa_cost_accounting",
+      "domain_name": "DCAA cost accounting"
+    },
+    {
+      "finding_id": "F-3316",
+      "rule_id": "L-02",
+      "headline": "Timekeeping exceeds paid hours by 12.0 h for E-0912",
+      "severity": "medium",
+      "status": "open",
+      "exposure_usd": "1156.80",
+      "employee_count": 1,
+      "employees": [
+        "E-0912"
+      ],
+      "contracts": [],
+      "period": "2026-08",
+      "domain": "labor",
+      "domain_name": "Labor"
+    },
+    {
+      "finding_id": "F-3317",
+      "rule_id": "L-02",
+      "headline": "Paid hours exceed timekeeping by 9.5 h for E-0733",
+      "severity": "medium",
+      "status": "open",
+      "exposure_usd": "976.13",
+      "employee_count": 1,
+      "employees": [
+        "E-0733"
+      ],
+      "contracts": [],
+      "period": "2026-08",
+      "domain": "labor",
+      "domain_name": "Labor"
+    },
+    {
+      "finding_id": "F-3318",
+      "rule_id": "L-02",
+      "headline": "Timekeeping exceeds paid hours by 8.0 h for E-1104",
+      "severity": "medium",
+      "status": "open",
+      "exposure_usd": "705.60",
+      "employee_count": 1,
+      "employees": [
+        "E-1104"
+      ],
+      "contracts": [],
+      "period": "2026-08",
+      "domain": "labor",
+      "domain_name": "Labor"
+    },
+    {
+      "finding_id": "F-3319",
+      "rule_id": "DQ-01",
+      "headline": "4 timekeeping employee IDs are not present in the HRIS roster",
+      "severity": "medium",
+      "status": "open",
+      "exposure_usd": "0.00",
+      "employee_count": 4,
+      "employees": [
+        "E-0301",
+        "E-0302",
+        "E-0303",
+        "E-0304"
+      ],
+      "contracts": [],
+      "period": "2026-08",
+      "domain": "labor",
+      "domain_name": "Labor"
+    },
+    {
+      "finding_id": "F-3320",
+      "rule_id": "L-06",
+      "headline": "Post-submission edit rate 3.6%, with 9 edits lacking a reason code",
+      "severity": "low",
+      "status": "open",
+      "exposure_usd": "4199.80",
+      "employee_count": 6,
+      "employees": [
+        "E-0101",
+        "E-0102",
+        "E-0501",
+        "E-0502",
+        "E-0503",
+        "E-0504"
+      ],
+      "contracts": [
+        "C-7302",
+        "C-8841"
+      ],
+      "period": "2026-08",
+      "domain": "labor",
+      "domain_name": "Labor"
+    },
+    {
+      "finding_id": "F-3321",
+      "rule_id": "C-01",
+      "headline": "$23,550.00 of expressly unallowable cost sits in the G&A pool (3 accounts)",
+      "severity": "high",
+      "status": "open",
+      "exposure_usd": "23550.00",
+      "employee_count": 0,
+      "employees": [],
+      "contracts": [],
+      "period": "2026-08",
+      "domain": "dcaa_cost_accounting",
+      "domain_name": "DCAA cost accounting"
+    },
+    {
+      "finding_id": "F-3322",
+      "rule_id": "C-01",
+      "headline": "$1,850.00 of expressly unallowable cost sits in the overhead pool (1 account)",
+      "severity": "medium",
+      "status": "open",
+      "exposure_usd": "1850.00",
+      "employee_count": 0,
+      "employees": [],
+      "contracts": [],
+      "period": "2026-08",
+      "domain": "dcaa_cost_accounting",
+      "domain_name": "DCAA cost accounting"
+    },
+    {
+      "finding_id": "F-3323",
+      "rule_id": "C-02",
+      "headline": "The FY2025 incurred cost submission was due 2026-06-30 and is not recorded as submitted (62 days overdue)",
+      "severity": "high",
+      "status": "open",
+      "exposure_usd": "0.00",
+      "employee_count": 0,
+      "employees": [],
+      "contracts": [],
+      "period": "2026-08",
+      "domain": "dcaa_cost_accounting",
+      "domain_name": "DCAA cost accounting"
+    },
+    {
+      "finding_id": "F-3324",
+      "rule_id": "C-03",
+      "headline": "The overhead provisional billing rate (18.00%) is above its contractual ceiling (17.50%)",
+      "severity": "high",
+      "status": "open",
+      "exposure_usd": "8663.24",
+      "employee_count": 0,
+      "employees": [],
+      "contracts": [],
+      "period": "2026-08",
+      "domain": "dcaa_cost_accounting",
+      "domain_name": "DCAA cost accounting"
+    }
+  ]
+}

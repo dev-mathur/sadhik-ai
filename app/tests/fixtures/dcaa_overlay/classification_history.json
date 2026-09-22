@@ -1,0 +1,6 @@
+{"note":"test fixture",
+ "periods":["2026-06","2026-07"],
+ "employees":{
+   "E-0001":{"2026-06":{"direct_hours":"150.0","indirect_hours":"6.0"},
+             "2026-07":{"direct_hours":"148.5","indirect_hours":"7.5"}},
+   "E-0002":{"2026-06":{"direct_hours":"140.0","indirect_hours":"0.0"}}}}

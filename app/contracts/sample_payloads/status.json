@@ -1,0 +1,199 @@
+{
+  "period": "2026-08",
+  "as_of": "2026-09-20",
+  "label": "14 open findings",
+  "label_kind": "open_findings",
+  "open_findings": 14,
+  "by_severity": {
+    "high": 8,
+    "medium": 5,
+    "low": 1
+  },
+  "total_exposure_usd": "102491.51",
+  "coverage": {
+    "evaluated": 11,
+    "applicable": 11,
+    "ratio": "1.0000",
+    "floor": "0.85"
+  },
+  "last_run_id": "RUN-2026-08-MER-001",
+  "last_run_at": "2026-09-03T14:22:07Z",
+  "tiers": [
+    {
+      "tier": "fast",
+      "label": "Fast",
+      "cadence": "weekly",
+      "last_run_id": "RUN-2026-08-MER-001",
+      "last_run_at": "2026-09-03T14:22:07Z",
+      "rules_in_tier": 4,
+      "rules_evaluated": 4,
+      "state": "overdue",
+      "next_due": "2026-09-10",
+      "note": "Declared weekly; last run 2026-09-03, so the next run was due 2026-09-10"
+    },
+    {
+      "tier": "pay_period",
+      "label": "Pay period",
+      "cadence": "semi_monthly",
+      "last_run_id": "RUN-2026-08-MER-001",
+      "last_run_at": "2026-09-03T14:22:07Z",
+      "rules_in_tier": 2,
+      "rules_evaluated": 2,
+      "state": "overdue",
+      "next_due": "2026-09-18",
+      "note": null
+    },
+    {
+      "tier": "close",
+      "label": "Close",
+      "cadence": "monthly",
+      "last_run_id": "RUN-2026-08-MER-001",
+      "last_run_at": "2026-09-03T14:22:07Z",
+      "rules_in_tier": 5,
+      "rules_evaluated": 5,
+      "state": "current",
+      "next_due": "2026-10-03",
+      "note": null
+    }
+  ],
+  "oldest_source": {
+    "source": "hris",
+    "file": "bamboo_roster_2026-08-01.csv",
+    "data_as_of": "2026-08-01",
+    "age_days": 50
+  },
+  "domains": [
+    {
+      "id": "labor",
+      "name": "Labor",
+      "enabled": true,
+      "available": true,
+      "state": "8 open findings",
+      "label_kind": "open_findings",
+      "open_findings": 8,
+      "by_severity": {
+        "high": 3,
+        "medium": 4,
+        "low": 1
+      },
+      "coverage": {
+        "evaluated": 6,
+        "applicable": 6,
+        "ratio": "1.0000",
+        "floor": "0.85"
+      }
+    },
+    {
+      "id": "dcaa_cost_accounting",
+      "name": "DCAA cost accounting",
+      "enabled": true,
+      "available": true,
+      "state": "6 open findings",
+      "label_kind": "open_findings",
+      "open_findings": 6,
+      "by_severity": {
+        "high": 5,
+        "medium": 1,
+        "low": 0
+      },
+      "coverage": {
+        "evaluated": 5,
+        "applicable": 5,
+        "ratio": "1.0000",
+        "floor": "0.85"
+      }
+    },
+    {
+      "id": "cmmc_evidence",
+      "name": "CMMC evidence",
+      "enabled": false,
+      "available": false,
+      "state": "coming later",
+      "label_kind": "unavailable",
+      "open_findings": 0,
+      "by_severity": {
+        "high": 0,
+        "medium": 0,
+        "low": 0
+      },
+      "coverage": null
+    },
+    {
+      "id": "proposals",
+      "name": "Proposals",
+      "enabled": false,
+      "available": false,
+      "state": "coming later",
+      "label_kind": "unavailable",
+      "open_findings": 0,
+      "by_severity": {
+        "high": 0,
+        "medium": 0,
+        "low": 0
+      },
+      "coverage": null
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "C-01",
+      "result": "Exception",
+      "domain": "dcaa_cost_accounting"
+    },
+    {
+      "rule_id": "C-02",
+      "result": "Exception",
+      "domain": "dcaa_cost_accounting"
+    },
+    {
+      "rule_id": "C-03",
+      "result": "Exception",
+      "domain": "dcaa_cost_accounting"
+    },
+    {
+      "rule_id": "L-01",
+      "result": "Exception",
+      "domain": "labor"
+    },
+    {
+      "rule_id": "L-02",
+      "result": "Exception",
+      "domain": "labor"
+    },
+    {
+      "rule_id": "L-03",
+      "result": "Consistent",
+      "domain": "labor"
+    },
+    {
+      "rule_id": "L-05",
+      "result": "Exception",
+      "domain": "labor"
+    },
+    {
+      "rule_id": "L-06",
+      "result": "Watch",
+      "domain": "labor"
+    },
+    {
+      "rule_id": "L-08",
+      "result": "Exception",
+      "domain": "dcaa_cost_accounting"
+    },
+    {
+      "rule_id": "L-09",
+      "result": "Exception",
+      "domain": "labor"
+    },
+    {
+      "rule_id": "L-11",
+      "result": "Exception",
+      "domain": "dcaa_cost_accounting"
+    },
+    {
+      "rule_id": "DQ-01",
+      "result": "Exception",
+      "domain": "labor"
+    }
+  ]
+}

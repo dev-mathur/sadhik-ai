@@ -1,0 +1,18 @@
+# Column mapping: provisional billing rate schedule -> canonical RateAgreement
+# (contracts/DCAA_DATA_SPEC.md 1.1).
+mapping_id: ratemodel_meridian
+version: 1
+source: rate_data
+columns:
+  rate_data:
+    "Pool": pool                            # fringe | overhead | ga
+    "Base Definition": base_definition      # direct_labor | total_cost_input
+    "Provisional Rate": provisional_rate    # a decimal fraction, e.g. 0.1000
+    "Effective From": effective_from
+    "Effective To": effective_to
+    "Source Document": source_document
+# The ceiling on the billing rate for a pool, written into the contract. Optional: a rate file without this
+# column still loads (the value is then None, and C-03 has nothing to test).
+optional_columns:
+  rate_data:
+    "Ceiling Rate": ceiling_rate

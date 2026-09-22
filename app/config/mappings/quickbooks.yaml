@@ -1,0 +1,12 @@
+# Column mapping: QuickBooks GL export -> canonical GLLine (contracts/DATA_SPEC.md 1.4).
+mapping_id: qb_meridian
+version: 2
+source: quickbooks
+columns:
+  gl:
+    "Account": account
+    "Class": project                # project / contract id, or INDIRECT
+    "Period": period
+    "Amount": amount
+    "Cost Type": cost_type
+    "Pool": pool                    # overhead | ga | fringe | empty for direct

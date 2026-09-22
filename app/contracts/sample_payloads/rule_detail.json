@@ -1,0 +1,54 @@
+{
+  "id": "L-05",
+  "version": "1.0.0",
+  "title": "Late or reconstructed time entries; entry-time clustering",
+  "authorities": [
+    "DCAA Information for Contractors: timely recording",
+    "SF 1408 timekeeping criterion"
+  ],
+  "basis": "audit_practice",
+  "tier": "fast",
+  "required_sources": [
+    "timekeeping"
+  ],
+  "review_status": "unreviewed",
+  "status": "active",
+  "last_result": "Exception",
+  "parameters": [
+    {
+      "name": "late_threshold_hours",
+      "default": "72",
+      "effective": "48",
+      "direction": "lower_is_stricter",
+      "min": "24",
+      "max": "168",
+      "floor": null,
+      "unit": "hours",
+      "description": ""
+    },
+    {
+      "name": "cluster_index_watch",
+      "default": "1.5",
+      "effective": "1.5",
+      "direction": "lower_is_stricter",
+      "min": "1.1",
+      "max": "3.0",
+      "floor": null,
+      "unit": "x baseline",
+      "description": ""
+    },
+    {
+      "name": "cluster_index_exception",
+      "default": "2.5",
+      "effective": "2.5",
+      "direction": "lower_is_stricter",
+      "min": "1.5",
+      "max": "5.0",
+      "floor": null,
+      "unit": "x baseline",
+      "description": ""
+    }
+  ],
+  "domain": "labor",
+  "domain_name": "Labor"
+}

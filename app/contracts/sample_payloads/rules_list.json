@@ -1,0 +1,307 @@
+{
+  "floor_registry_version": "2026-09-01",
+  "items": [
+    {
+      "id": "C-01",
+      "version": "1.0.0",
+      "title": "Unallowable cost screening",
+      "authorities": [
+        "FAR 31.205 (cost principles)",
+        "FAR 31.201-6 (accounting for unallowable costs)"
+      ],
+      "basis": "regulatory",
+      "tier": "close",
+      "required_sources": [
+        "gl"
+      ],
+      "review_status": "unreviewed",
+      "status": "active",
+      "last_result": "Exception",
+      "parameters": [
+        {
+          "name": "unallowable_tolerance_usd",
+          "default": "0",
+          "effective": "0",
+          "direction": "lower_is_stricter",
+          "min": null,
+          "max": null,
+          "floor": "0",
+          "unit": "USD",
+          "description": ""
+        }
+      ],
+      "domain": "dcaa_cost_accounting",
+      "domain_name": "DCAA cost accounting"
+    },
+    {
+      "id": "C-02",
+      "version": "1.0.0",
+      "title": "Incurred cost submission deadline",
+      "authorities": [
+        "FAR 52.216-7(d)(2)"
+      ],
+      "basis": "regulatory",
+      "tier": "close",
+      "required_sources": [
+        "rate_data"
+      ],
+      "review_status": "unreviewed",
+      "status": "active",
+      "last_result": "Exception",
+      "parameters": [
+        {
+          "name": "ics_due_months",
+          "default": "6",
+          "effective": "6",
+          "direction": "lower_is_stricter",
+          "min": "1",
+          "max": "6",
+          "floor": "6",
+          "unit": "months",
+          "description": ""
+        }
+      ],
+      "domain": "dcaa_cost_accounting",
+      "domain_name": "DCAA cost accounting"
+    },
+    {
+      "id": "C-03",
+      "version": "1.0.0",
+      "title": "Billing rate above a contractual ceiling",
+      "authorities": [
+        "Contract rate ceiling clause (to verify)",
+        "FAR 42.707 (to verify)"
+      ],
+      "basis": "contract",
+      "tier": "close",
+      "required_sources": [
+        "gl",
+        "rate_data"
+      ],
+      "review_status": "unreviewed",
+      "status": "active",
+      "last_result": "Exception",
+      "parameters": [
+        {
+          "name": "ceiling_excess_tolerance",
+          "default": "0",
+          "effective": "0",
+          "direction": "lower_is_stricter",
+          "min": null,
+          "max": null,
+          "floor": "0",
+          "unit": "rate fraction",
+          "description": ""
+        }
+      ],
+      "domain": "dcaa_cost_accounting",
+      "domain_name": "DCAA cost accounting"
+    },
+    {
+      "id": "L-05",
+      "version": "1.0.0",
+      "title": "Late or reconstructed time entries; entry-time clustering",
+      "authorities": [
+        "DCAA Information for Contractors: timely recording",
+        "SF 1408 timekeeping criterion"
+      ],
+      "basis": "audit_practice",
+      "tier": "fast",
+      "required_sources": [
+        "timekeeping"
+      ],
+      "review_status": "unreviewed",
+      "status": "active",
+      "last_result": "Exception",
+      "parameters": [
+        {
+          "name": "late_threshold_hours",
+          "default": "72",
+          "effective": "48",
+          "direction": "lower_is_stricter",
+          "min": "24",
+          "max": "168",
+          "floor": null,
+          "unit": "hours",
+          "description": ""
+        },
+        {
+          "name": "cluster_index_watch",
+          "default": "1.5",
+          "effective": "1.5",
+          "direction": "lower_is_stricter",
+          "min": "1.1",
+          "max": "3.0",
+          "floor": null,
+          "unit": "x baseline",
+          "description": ""
+        },
+        {
+          "name": "cluster_index_exception",
+          "default": "2.5",
+          "effective": "2.5",
+          "direction": "lower_is_stricter",
+          "min": "1.5",
+          "max": "5.0",
+          "floor": null,
+          "unit": "x baseline",
+          "description": ""
+        }
+      ],
+      "domain": "labor",
+      "domain_name": "Labor"
+    },
+    {
+      "id": "L-08",
+      "version": "1.0.0",
+      "title": "Direct/indirect classification consistency",
+      "authorities": [
+        "DFARS 252.242-7006(c)(2)",
+        "CAS 402 (to verify)"
+      ],
+      "basis": "audit_practice",
+      "tier": "fast",
+      "required_sources": [
+        "timekeeping"
+      ],
+      "review_status": "unreviewed",
+      "status": "active",
+      "last_result": "Exception",
+      "parameters": [
+        {
+          "name": "indirect_share_shift_pp",
+          "default": "15",
+          "effective": "15",
+          "direction": "lower_is_stricter",
+          "min": "5",
+          "max": "40",
+          "floor": null,
+          "unit": "pp",
+          "description": ""
+        },
+        {
+          "name": "min_excess_hours",
+          "default": "16",
+          "effective": "16",
+          "direction": "lower_is_stricter",
+          "min": "4",
+          "max": "80",
+          "floor": null,
+          "unit": "hours",
+          "description": ""
+        }
+      ],
+      "domain": "dcaa_cost_accounting",
+      "domain_name": "DCAA cost accounting"
+    },
+    {
+      "id": "L-09",
+      "version": "1.0.0",
+      "title": "Charges outside assignment or period of performance",
+      "authorities": [
+        "FAR 31.201-4",
+        "FAR 52.216-7"
+      ],
+      "basis": "contract",
+      "tier": "fast",
+      "required_sources": [
+        "timekeeping",
+        "contracts"
+      ],
+      "review_status": "unreviewed",
+      "status": "active",
+      "last_result": "Exception",
+      "parameters": [
+        {
+          "name": "out_of_pop_hours_tolerance",
+          "default": "0",
+          "effective": "0",
+          "direction": "lower_is_stricter",
+          "min": null,
+          "max": null,
+          "floor": "0",
+          "unit": "hours",
+          "description": ""
+        }
+      ],
+      "domain": "labor",
+      "domain_name": "Labor"
+    },
+    {
+      "id": "L-11",
+      "version": "1.0.0",
+      "title": "Indirect rate drift: actual vs provisional billing rates",
+      "authorities": [
+        "FAR 52.216-7",
+        "FAR 42.704",
+        "CAS 418 (to verify)"
+      ],
+      "basis": "audit_practice",
+      "tier": "close",
+      "required_sources": [
+        "gl",
+        "rate_data"
+      ],
+      "review_status": "unreviewed",
+      "status": "active",
+      "last_result": "Exception",
+      "parameters": [
+        {
+          "name": "rate_drift_watch_pct",
+          "default": "2.0",
+          "effective": "2.0",
+          "direction": "lower_is_stricter",
+          "min": "0.5",
+          "max": "4.0",
+          "floor": null,
+          "unit": "%",
+          "description": ""
+        },
+        {
+          "name": "rate_drift_exception_pct",
+          "default": "5.0",
+          "effective": "5.0",
+          "direction": "lower_is_stricter",
+          "min": "2.0",
+          "max": "10.0",
+          "floor": null,
+          "unit": "%",
+          "description": ""
+        },
+        {
+          "name": "systemic_periods",
+          "default": "3",
+          "effective": "3",
+          "direction": "lower_is_stricter",
+          "min": "2",
+          "max": "6",
+          "floor": null,
+          "unit": "periods",
+          "description": ""
+        }
+      ],
+      "domain": "dcaa_cost_accounting",
+      "domain_name": "DCAA cost accounting"
+    },
+    {
+      "id": "DQ-01",
+      "version": "1.0.0",
+      "title": "Employee IDs present in timekeeping but absent from HRIS",
+      "authorities": [
+        "internal data-quality gate"
+      ],
+      "basis": "audit_practice",
+      "tier": "pay_period",
+      "required_sources": [
+        "timekeeping",
+        "hris"
+      ],
+      "review_status": "unreviewed",
+      "status": "active",
+      "last_result": "Exception",
+      "parameters": [],
+      "domain": "labor",
+      "domain_name": "Labor"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+[
+  {"contract_id":"C-8841","name":"SPECTRA","type":"T&M","pop_start":"2025-10-01","pop_end":"2026-09-30",
+   "ceiling":"6000000.00","funded_value":"4200000.00",
+   "labor_categories":[{"name":"Data Engineer II","ceiling_rate":"142.00","min_qualification":"BS + 3 years"},
+                       {"name":"Data Engineer III","ceiling_rate":"178.50","min_qualification":"BS + 7 years"}],
+   "key_personnel":["E-0001"],"charge_codes":["C8841-DEV","C8841-PM"],"source_pdf":"C-8841.pdf",
+   "extraction":{"confirmed_by":"a.okafor","confirmed_at":"2026-04-11T09:31:00Z","pages":{"pop":3}}},
+  {"contract_id":"C-7302","name":"HELIOS","type":"CPFF","pop_start":"2025-08-16","pop_end":"2026-08-15",
+   "ceiling":"3150000.00","funded_value":"3150000.00",
+   "labor_categories":[{"name":"Data Engineer III","ceiling_rate":"170.00","min_qualification":"BS + 7 years"}],
+   "key_personnel":[],"charge_codes":["C7302-DEV"],"source_pdf":"C-7302.pdf",
+   "extraction":{"confirmed_by":"a.okafor","confirmed_at":"2026-04-11T09:31:00Z","pages":{"pop":3}}}
+]

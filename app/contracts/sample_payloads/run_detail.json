@@ -1,0 +1,168 @@
+{
+  "run_id": "RUN-2026-08-MER-001",
+  "period": "2026-08",
+  "tier": "close",
+  "executed_at": "2026-09-03T14:22:07Z",
+  "manifest": {
+    "run_id": "RUN-2026-08-MER-001",
+    "period": "2026-08",
+    "tier": "close",
+    "executed_at": "2026-09-03T14:22:07Z",
+    "inputs": [
+      {
+        "source": "timekeeping",
+        "file": "meridian_time_2026-08.csv",
+        "sha256": "9f3c1a7e5b2d",
+        "rows": 4120,
+        "data_as_of": "2026-08-31"
+      },
+      {
+        "source": "time_edits",
+        "file": "meridian_time_edits_2026-08.csv",
+        "sha256": "2b81d40c77aa",
+        "rows": 148,
+        "data_as_of": "2026-08-31"
+      },
+      {
+        "source": "payroll",
+        "file": "adp_payroll_2026-08.csv",
+        "sha256": "c47e9b1200de",
+        "rows": 284,
+        "data_as_of": "2026-08-31"
+      },
+      {
+        "source": "gl",
+        "file": "qb_gl_2026-08.csv",
+        "sha256": "55a0f8d3b1c9",
+        "rows": 1806,
+        "data_as_of": "2026-08-31"
+      },
+      {
+        "source": "hris",
+        "file": "bamboo_roster_2026-08-01.csv",
+        "sha256": "e19b6c44f0a2",
+        "rows": 142,
+        "data_as_of": "2026-08-01"
+      },
+      {
+        "source": "contracts",
+        "file": "contracts.json",
+        "sha256": "7d2a91c0e8f3",
+        "rows": 2,
+        "data_as_of": "2026-04-11"
+      },
+      {
+        "source": "rate_data",
+        "file": "meridian_rates_2026-08.csv",
+        "sha256": "3e5b9d10a7c4",
+        "rows": 3,
+        "data_as_of": "2026-08-31"
+      }
+    ],
+    "sources_absent": [],
+    "mapping_versions": {
+      "unanet": 3,
+      "adp": 2,
+      "quickbooks": 2,
+      "bamboo": 1,
+      "ratemodel": 1
+    },
+    "rule_versions": {
+      "L-01": "1.0.0",
+      "L-02": "1.0.0",
+      "L-03": "1.0.0",
+      "L-05": "1.0.0",
+      "L-06": "1.0.0",
+      "L-09": "1.0.0",
+      "L-11": "1.0.0",
+      "DQ-01": "1.0.0",
+      "L-08": "1.0.0",
+      "C-01": "1.0.0",
+      "C-02": "1.0.0",
+      "C-03": "1.0.0"
+    },
+    "config_file": {
+      "config_version": 7,
+      "sha256": "6a1f0b95c3d2"
+    },
+    "floor_registry_version": "2026-09-01",
+    "declared_schedule": {
+      "fast": "weekly",
+      "pay_period": "semi_monthly",
+      "close": "monthly"
+    },
+    "materiality": {
+      "basis_usd": "1986240.00",
+      "pct": "0.005",
+      "usd": "9931.20"
+    },
+    "enabled_domains": [
+      "labor",
+      "dcaa_cost_accounting"
+    ],
+    "reference_tables": [
+      {
+        "name": "account_categories",
+        "sha256": "a91f2c66d0e1"
+      },
+      {
+        "name": "classification_history",
+        "sha256": "77d3e8b4c2a9"
+      },
+      {
+        "name": "account_allowability",
+        "sha256": "b4c19e07d2a5"
+      },
+      {
+        "name": "ics_submissions",
+        "sha256": "303dbcfb86b2"
+      }
+    ]
+  },
+  "rules": [
+    {
+      "rule_id": "L-01",
+      "domain": "labor",
+      "result": "Exception",
+      "findings": 1,
+      "metrics": [
+        {
+          "id": "M3",
+          "value": "0.0029",
+          "result": "Exception"
+        }
+      ]
+    },
+    {
+      "rule_id": "L-11",
+      "domain": "dcaa_cost_accounting",
+      "result": "Exception",
+      "findings": 1,
+      "metrics": [
+        {
+          "id": "M10",
+          "value": "0.0800",
+          "result": "Exception"
+        }
+      ]
+    }
+  ],
+  "total_exposure_usd": "102491.51",
+  "label": "14 open findings",
+  "findings": [
+    "F-3311",
+    "F-3312",
+    "F-3313",
+    "F-3314",
+    "F-3315",
+    "F-3316",
+    "F-3317",
+    "F-3318",
+    "F-3319",
+    "F-3320",
+    "F-3321",
+    "F-3322",
+    "F-3323",
+    "F-3324"
+  ]
+}

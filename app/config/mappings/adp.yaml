@@ -1,0 +1,12 @@
+# Column mapping: ADP payroll register -> canonical PayRecord (contracts/DATA_SPEC.md 1.3).
+mapping_id: adp_meridian
+version: 2
+source: adp
+columns:
+  payroll:
+    "Associate ID": employee_id
+    "Pay Period": pay_period
+    "Reg Hrs": regular_hours
+    "OT Hrs": overtime_hours
+    "PTO Hrs": pto_hours
+    "Gross Pay": gross_pay

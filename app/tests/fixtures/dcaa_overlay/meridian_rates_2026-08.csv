@@ -1,0 +1,4 @@
+Pool,Base Definition,Provisional Rate,Effective From,Effective To,Source Document,Ceiling Rate
+fringe,direct_labor,0.2800,2026-01-01,2026-12-31,FY2026 provisional billing rate schedule,0.3000
+overhead,direct_labor,0.1800,2026-01-01,2026-12-31,FY2026 provisional billing rate schedule,0.2000
+ga,total_cost_input,0.1000,2026-01-01,2026-12-31,FY2026 provisional billing rate schedule,0.1200

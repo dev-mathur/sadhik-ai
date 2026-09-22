@@ -1,0 +1,65 @@
+{
+  "finding_id": "F-3311",
+  "total": 14,
+  "page": 1,
+  "page_size": 50,
+  "items": [
+    {
+      "kind": "time_entry",
+      "ref_id": "TE-884112",
+      "source_file": "meridian_time_2026-08.csv",
+      "sha256": "9f3c1a7e5b2d",
+      "row": 1188,
+      "detail": {
+        "employee_id": "E-0417",
+        "work_date": "2026-08-03",
+        "hours": "8.0",
+        "charge_code": "C8841-DEV",
+        "labor_category": "Data Engineer III",
+        "entered_at": "2026-08-03T16:42:00"
+      }
+    },
+    {
+      "kind": "time_entry",
+      "ref_id": "TE-884119",
+      "source_file": "meridian_time_2026-08.csv",
+      "sha256": "9f3c1a7e5b2d",
+      "row": 1203,
+      "detail": {
+        "employee_id": "E-0417",
+        "work_date": "2026-08-04",
+        "hours": "8.0",
+        "charge_code": "C8841-DEV",
+        "labor_category": "Data Engineer III",
+        "entered_at": "2026-08-04T16:42:00"
+      }
+    },
+    {
+      "kind": "crosswalk",
+      "ref_id": "Data Engineer",
+      "source_file": "labor_category_crosswalk.csv",
+      "sha256": "c1d2e3f4a5b6",
+      "row": 3,
+      "detail": {
+        "hris_title": "Data Engineer",
+        "contract_category": "Data Engineer II",
+        "confirmed_by": "a.okafor",
+        "confirmed_at": "2026-04-11T09:31:00Z"
+      }
+    },
+    {
+      "kind": "contract_term",
+      "ref_id": "C-8841/Data Engineer II",
+      "source_file": "contracts.json",
+      "sha256": "7d2a91c0e8f3",
+      "row": null,
+      "detail": {
+        "category": "Data Engineer II",
+        "ceiling_rate": "142.00",
+        "source_pdf": "C-8841.pdf",
+        "page": 12,
+        "confirmed_by": "a.okafor"
+      }
+    }
+  ]
+}
