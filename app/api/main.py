@@ -59,9 +59,11 @@ def create_app(
 
     app = FastAPI(title="Sadhik API", version="0.1.0", lifespan=lifespan)
     app.state.service = svc
+    # Allow requests from localhost (dev) and any onrender.com subdomain (production)
     app.add_middleware(
         CORSMiddleware,
-        allow_origin_regex=r"https?://(localhost|127\.0\.0\.1|\[::1\])(:\d+)?",
+        allow_origin_regex=r"https?://(localhost|127\.0\.0\.1|\[::1\])(:\d+)?|https://.*\.onrender\.com",
+        allow_credentials=True,
         allow_methods=["*"],
         allow_headers=["*"],
     )

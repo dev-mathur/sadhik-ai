@@ -31,10 +31,14 @@ function errorFrom(status: number, json: unknown, statusText: string): ApiError 
   return new ApiError(status, code, message);
 }
 
+// Get API base URL from environment variable or default to relative path for development
+const API_BASE_URL = import.meta.env.VITE_API_URL || '';
+
 async function request(method: string, path: string, body?: unknown): Promise<{ res: Response; json: unknown }> {
   let res: Response;
+  const url = API_BASE_URL + path;
   try {
-    res = await fetch(path, {
+    res = await fetch(url, {
       method,
       headers: body === undefined ? { accept: 'application/json' } : { accept: 'application/json', 'content-type': 'application/json' },
       body: body === undefined ? undefined : JSON.stringify(body),
